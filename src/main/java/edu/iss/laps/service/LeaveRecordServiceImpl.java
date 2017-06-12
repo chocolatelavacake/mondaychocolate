@@ -26,4 +26,10 @@ public class LeaveRecordServiceImpl implements LeaveRecordService {
 		ArrayList<Leaverecord> uil = (ArrayList<Leaverecord>) leaveRecordRepository.findLeaveRecords();
 		return uil;
 	}
+	
+	@Transactional
+	public Leaverecord CreateLeave(Leaverecord leaveR) {
+		// TODO Auto-generated method stub
+	 return leaveRecordRepository.saveAndFlush(leaveR);
+	}
 }

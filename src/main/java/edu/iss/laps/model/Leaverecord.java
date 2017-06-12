@@ -1,6 +1,6 @@
 package edu.iss.laps.model;
 
-import java.io.Serializable;
+
 import javax.persistence.*;
 import java.util.Date;
 
@@ -13,6 +13,12 @@ import java.util.Date;
 @Table(name="leaverecord")
 @NamedQuery(name="Leaverecord.findAll", query="SELECT l FROM Leaverecord l")
 public class Leaverecord {
+	
+	public static final String SUBMITTED = "SUBMITTED";
+	public static final String APPROVED = "APPROVED";
+	public static final String WITHDRAWN = "WITHDRAWN";
+	public static final String UPDATED = "UPDATED";
+	public static final String REJECTED = "REJECTED";
 
 	@Id
 	@Column(name="id_lrd")

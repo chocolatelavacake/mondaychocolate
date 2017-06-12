@@ -7,5 +7,7 @@ import edu.iss.laps.model.Leaverecord;
 public interface LeaveRecordService {
 
 	ArrayList<Leaverecord> findLeaveRecords();
+	
+	Leaverecord CreateLeave(Leaverecord leaveR);
 
 }
